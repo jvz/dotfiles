@@ -1,0 +1,13 @@
+for f; do
+    integer i=0
+    while [[ -e "$f.$i" ]]; do
+        (( i++ ))
+    done
+    local flags="-fp" # force; preserve mode, ownership, timestamps
+    if [[ -d $f ]]; then
+        flags="${flags}r" # recursive
+    fi
+    cp $flags $f $f.$i
+    echo "Copied to $f.$i"
+done
+# vim:syn=zsh:

@@ -1,0 +1,5 @@
+false
+until (($? == 0))
+do
+    ssh $* || (sleep 1;false)
+done

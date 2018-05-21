@@ -1,0 +1,6 @@
+[user]
+	name = Matt Sicker
+	email = boards@gmail.com
+[core]
+	autocrlf = input
+	excludesfile = /Users/matt/.gitignore_global

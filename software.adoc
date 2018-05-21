@@ -1,0 +1,64 @@
+= Software
+
+== Starting
+
+ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+== Casks
+
+ brew cask install ...
+
+* iterm2
+* font-source-code-pro
+    brew tap caskroom/fonts && brew cask install font-source-code-pro
+* docker
+* java
+* google-chrome
+* firefox
+* intellij-idea
+* intellij-idea-ce
+* slack
+* hipchat
+* gitter
+* colloquy - irc
+* tunnelblick - vpn
+
+== Formulae
+
+ brew install ...
+
+=== Utilities
+
+* gnupg
+* pigz, pbzip2 - parallel gz/bz2 programs
+* xz
+* stow - dotfiles management
+* aria2 - download util
+* mpv, youtube-dl
+
+=== Programming
+
+* gdub - gradle manager thing
+* gradle
+* maven
+* git
+* git-extras
+* hub - github tool
+* vim
+* zsh
+* tmux
+
+=== Chat
+
+* weechat --with-python@2
+** /script install vimode.py
+* bitlbee
+
+=== Interesting?
+* git-appraise - distributed pull request type tool
+* git-vendor - manage external git repos (alt to submodules)
+* git-subrepo - another alt to submodules
+* gitslave - group together several slave repos into a master repo
+* git-fixup - neat way to fix up older commits by amending them
+* git-town - neat project management high level commands (git-town.com)
+
