@@ -1,5 +1,5 @@
 [submodule "zimfw"]
-	path = zimfw
+	path = zim/.zim
 	url = https://github.com/zimfw/zimfw.git
 	branch = master
 [submodule "vim-plug"]
