@@ -1,0 +1,9 @@
+= Matt's dotfiles
+
+This repository contains publicly available config files and command line tools.
+Requires https://brew.sh[Homebrew] to install.
+Then, simply execute `./install.sh` to install base homebrew dependencies and to stow everything.
+
+To update a local install, run `./update.sh` to get the latest git submodules, and then run `./install.sh` to update the installed items.
+
+See also link:software.adoc[software list] for some software.
