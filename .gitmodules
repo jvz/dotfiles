@@ -1,0 +1,12 @@
+[submodule "zimfw"]
+	path = zimfw
+	url = https://github.com/zimfw/zimfw.git
+	branch = master
+[submodule "vim-plug"]
+	path = vim-plug
+	url = https://github.com/junegunn/vim-plug.git
+	branch = master
+[submodule "sbt-extras"]
+	path = sbt-extras
+	url = https://github.com/paulp/sbt-extras.git
+	branch = master
