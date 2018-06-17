@@ -29,6 +29,7 @@ stow_file() {
 
 main() {
     install_dependencies
+    git submodule update --init --recursive
     # it's important for files to be stowed first to avoid oversharing directories with stow
     stow_file sbt-extras/sbt "$HOME/bin"
     stow_file vim-plug/plug.vim "$HOME/.vim/autoload"
