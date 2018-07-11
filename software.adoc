@@ -8,10 +8,12 @@
 
  brew cask install ...
 
+* keepingyouawake - like caffeine
 * iterm2
 * font-source-code-pro
     brew tap caskroom/fonts && brew cask install font-source-code-pro
 * docker
+* minikube
 * java
 * google-chrome
 * firefox
@@ -20,7 +22,6 @@
 * slack
 * hipchat
 * gitter
-* colloquy - irc
 * tunnelblick - vpn
 
 == Formulae
@@ -47,6 +48,14 @@
 * vim
 * zsh
 * tmux
+
+=== DevOps
+
+* jenkins-x/jx/jx
+* awscli
+* weaveworks/tap/eksctl
+* kops
+* kubernetes-helm
 
 === Chat
 
