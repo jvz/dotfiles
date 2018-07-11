@@ -1,11 +1,14 @@
+#
+# User configuration sourced by interactive shells
+#
+
 # path settings
 [[ -d ~/bin ]] && export PATH=~/bin:$PATH
 [[ -d /usr/local/bin/go ]] && export PATH=$PATH:$(go env GOPATH)
 [[ -d ~/Library/Python/2.7/bin ]] && export PATH=~/Library/Python/2.7/bin:$PATH
 
-#
-# User configuration sourced by interactive shells
-#
+# Anchore development settings
+export ANCHORE_SRC_HOME=$HOME/code/anchore
 
 # Change default zim location
 export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
