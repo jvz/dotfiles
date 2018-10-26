@@ -13,16 +13,16 @@
 * font-source-code-pro
     brew tap caskroom/fonts && brew cask install font-source-code-pro
 * docker
-* minikube
+* minikube - included in docker for mac now
 * java
 * google-chrome
 * firefox
 * intellij-idea
 * intellij-idea-ce
 * slack
-* hipchat
 * gitter
 * tunnelblick - vpn
+* teensy - ErgoDox EZ keyboard layout editor
 
 == Formulae
 

@@ -10,6 +10,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go'
 Plug 'tpope/vim-vinegar'
 Plug 'majutsushi/tagbar'
+"Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'sheerun/vim-polyglot'
 
 "if has('nvim')
 "  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
