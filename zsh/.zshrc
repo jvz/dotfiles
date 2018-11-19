@@ -17,6 +17,9 @@ export ANCHORE_SRC_HOME=$HOME/code/anchore
 # Change default zim location
 export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 
+# Use hub(1) for git when available
+[ $commands[hub] ] && alias git=hub
+
 # Start zim
 [[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh
 
