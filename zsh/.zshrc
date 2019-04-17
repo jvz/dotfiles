@@ -29,3 +29,15 @@ if [ $commands[kubectl] ]; then
 fi
 [ $commands[jx] ] && source <(jx completion zsh)
 [ $commands[helm] ] && source <(helm completion zsh)
+
+# Maven aliases
+if [ $commands[mvn] ]; then
+    alias mvnci='mvn clean install'
+    alias mvncp='mvn clean package'
+    alias mvncv='mvn clean verify'
+    alias mvnq='mvn clean install -DskipTests -Dfindbugs.skip'
+    alias mvnIi='mvn clean install -DskipTests -Dfindbugs.skip -Dset.changelist'
+    alias mvnIu='mvn incrementals:update'
+    alias mvndeps='mvn dependency:tree'
+    alias mvndepso='mvn dependency:tree -DoutputFile=deps.txt'
+fi
