@@ -9,7 +9,10 @@ insert_path() {
 insert_path ~/bin
 insert_path ~/go/bin
 insert_path ~/Library/Python/2.7/bin
+insert_path ~/.local/bin
 insert_path /usr/local/sbin
+
+[ $commands[gpg] ] && export GPG_TTY=$(tty)
 
 # Anchore development settings
 export ANCHORE_SRC_HOME=$HOME/code/anchore
@@ -35,9 +38,14 @@ if [ $commands[mvn] ]; then
     alias mvnci='mvn clean install'
     alias mvncp='mvn clean package'
     alias mvncv='mvn clean verify'
+    alias mvncr='mvn clean process-resources'
     alias mvnq='mvn clean install -DskipTests -Dfindbugs.skip'
     alias mvnIi='mvn clean install -DskipTests -Dfindbugs.skip -Dset.changelist'
     alias mvnIu='mvn incrementals:update'
     alias mvndeps='mvn dependency:tree'
     alias mvndepso='mvn dependency:tree -DoutputFile=deps.txt'
+
+    function mvnjt() {
+        mvn -f core -DskipTests -Dfindbugs.skip install && mvn -f test -Dtest=$1 surefire:test
+    }
 fi
