@@ -81,7 +81,8 @@ colorscheme slate
 
 " highlight current row and column
 "set cuc
-set cul
+"set cul
+" disabled due to slowness
 
 set title " set title changing
 
