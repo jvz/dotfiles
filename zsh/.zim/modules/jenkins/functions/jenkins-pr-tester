@@ -1,0 +1,1 @@
+docker run --rm -ti -p 8080:8080 -e ID=$1 jenkins/core-pr-tester

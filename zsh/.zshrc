@@ -12,7 +12,11 @@ insert_path ~/Library/Python/2.7/bin
 insert_path ~/.local/bin
 insert_path /usr/local/sbin
 
-[ $commands[gpg] ] && export GPG_TTY=$(tty)
+if [ $commands[gpg] ]; then
+   export GPG_TTY=$(tty)
+   export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+   gpgconf --launch gpg-agent
+fi
 
 # Anchore development settings
 export ANCHORE_SRC_HOME=$HOME/code/anchore
@@ -39,13 +43,20 @@ if [ $commands[mvn] ]; then
     alias mvncp='mvn clean package'
     alias mvncv='mvn clean verify'
     alias mvncr='mvn clean process-resources'
-    alias mvnq='mvn clean install -DskipTests -Dfindbugs.skip'
-    alias mvnIi='mvn clean install -DskipTests -Dfindbugs.skip -Dset.changelist'
+    alias mvnq='mvn clean install -DskipTests -Dfindbugs.skip -Dspotbugs.skip'
+    alias mvnIi='mvn clean install -DskipTests -Dfindbugs.skip -Dspotbugs.skip -Dset.changelist'
     alias mvnIu='mvn incrementals:update'
     alias mvndeps='mvn dependency:tree'
     alias mvndepso='mvn dependency:tree -DoutputFile=deps.txt'
+
+    function mvn8() {
+       JAVA_HOME=$(/usr/libexec/java_home -v 1.8) mvn $@
+    }
 
     function mvnjt() {
         mvn -f core -DskipTests -Dfindbugs.skip install && mvn -f test -Dtest=$1 surefire:test
     }
 fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
