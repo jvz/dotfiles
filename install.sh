@@ -32,8 +32,11 @@ main() {
     # it's important for files to be stowed first to avoid oversharing directories with stow
     stow_file sbt-extras/sbt "$HOME/bin"
     stow_file vim-plug/plug.vim "$HOME/.vim/autoload"
-    stow_dirs vim emacs git zim zsh
+    stow_file zimfw/zimfw.zsh "$HOME/.zim"
+    stow_dirs vim emacs git zsh
     vim -c ":PlugInstall"
+    echo To finish installing zim, run the following:
+    echo source "$HOME/.zim/zimfw.zsh" install
 }
 
 main

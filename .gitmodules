@@ -6,3 +6,6 @@
 	path = sbt-extras
 	url = https://github.com/paulp/sbt-extras.git
 	branch = master
+[submodule "zimfw"]
+	path = zimfw
+	url = git@github.com:zimfw/zimfw.git

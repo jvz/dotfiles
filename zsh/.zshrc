@@ -7,9 +7,6 @@ insert_path() {
     [[ -d $1 ]] && export PATH=$1:$PATH
 }
 insert_path ~/bin
-insert_path ~/go/bin
-insert_path ~/Library/Python/2.7/bin
-insert_path ~/.local/bin
 insert_path /usr/local/sbin
 
 if [ $commands[gpg] ]; then
@@ -18,18 +15,21 @@ if [ $commands[gpg] ]; then
    gpgconf --launch gpg-agent
 fi
 
-# Anchore development settings
-export ANCHORE_SRC_HOME=$HOME/code/anchore
+# zim settings
+zstyle ':zim:input' double-dot-expand yes
+zstyle ':zim:git' aliases-prefix 'g'
 
 # Change default zim location
 export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 
+if [[ ${ZIM_HOME}/init.zsh -ot ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+  # Update static initialization script if it's outdated, before sourcing it
+  source ${ZIM_HOME}/zimfw.zsh init -q
+fi
+source ${ZIM_HOME}/init.zsh
+
 # Use hub(1) for git when available
 [ $commands[hub] ] && alias git=hub
-
-# Start zim
-[[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh
-
 if [ $commands[kubectl] ]; then
     alias kc=kubectl
     source <(kubectl completion zsh)
@@ -38,6 +38,7 @@ fi
 [ $commands[helm] ] && source <(helm completion zsh)
 
 # Maven aliases
+# TODO: move to jvzsh or own module
 if [ $commands[mvn] ]; then
     alias mvnci='mvn clean install'
     alias mvncp='mvn clean package'
@@ -58,5 +59,6 @@ if [ $commands[mvn] ]; then
     }
 fi
 
+# iTerm integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
