@@ -7,3 +7,5 @@ Then, simply execute `./install.sh` to install base homebrew dependencies and to
 To update a local install, run `./update.sh` to get the latest git submodules, and then run `./install.sh` to update the installed items.
 
 See also link:software.adoc[software list] for some software.
+
+Note that aliases and functions are being moved to https://github.com/jvz/jvzsh as installable modules and potentially elsewhere.
