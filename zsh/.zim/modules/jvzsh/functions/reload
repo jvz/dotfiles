@@ -1,3 +1,0 @@
-rm -f ~/.zcompdump
-source ~/.zshrc
-compinit

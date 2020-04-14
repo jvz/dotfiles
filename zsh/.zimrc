@@ -19,8 +19,8 @@ zmodule utility
 #
 # Exposes git repository status information to prompts.
 zmodule git-info
-# A customizable version of steeef's prompt theme.
-zmodule steeef
+# eriner theme
+zmodule eriner
 
 # Additional completion definitions for Zsh.
 zmodule zsh-users/zsh-completions
@@ -36,11 +36,7 @@ zmodule zsh-users/zsh-syntax-highlighting
 # zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
 
-zmodule directory
-zmodule history
 zmodule archive
 
-zmodule jvzsh
-zmodule jenkins
-
-zdouble_dot_expand='true'
+# Custom utilities
+zmodule jvz/jvzsh
