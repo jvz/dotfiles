@@ -7,7 +7,6 @@ require_command() {
 install_dependencies() {
     require_command brew "You must install homebrew to run this script. Go to https://brew.sh/ and follow the instructions."
     brew update && brew install stow vim git zsh tmux
-    pip3 install neovim
 }
 
 stow_dirs() {
