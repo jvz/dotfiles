@@ -42,6 +42,3 @@ zmodule archive
 # Custom utilities
 zmodule jvz/jvzsh
 
-# Other settings
-zstyle ':zim:git' aliases-prefix 'g'
-
