@@ -20,8 +20,9 @@ zmodule utility
 #
 # Exposes git repository status information to prompts.
 zmodule git-info
-# eriner theme
-zmodule eriner
+# https://zimfw.sh/docs/themes/
+# theme
+zmodule sorin
 
 # Additional completion definitions for Zsh.
 zmodule zsh-users/zsh-completions
